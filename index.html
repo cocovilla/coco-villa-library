@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f3eb">
+  <meta name="description" content="Explore the complimentary guest library at Coco Villa Unawatuna. Find a book to enjoy during your stay.">
+  <title>Coco Villa Guest Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/books.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Coco Villa Guest Library home">
+      <span class="brand-mark" aria-hidden="true">cv</span>
+      <span><strong>Coco Villa</strong><small>GUEST LIBRARY</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#library">The Library</a>
+      <a href="#about">A little note</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> A LITTLE LIBRARY BY THE SEA</p>
+        <h1>A Little Reading,<br><em>A Little Relaxing</em></h1>
+        <p class="hero-description">Take a break, unwind, and discover a good book during your stay at Coco Villa Unawatuna. Explore our little guest library and borrow a book to enjoy during your time with us.</p>
+        <a class="primary-button" href="#library">Explore Our Books <span aria-hidden="true">↗</span></a>
+        <p class="hero-note">A thoughtful little extra, just for our guests.</p>
+      </div>
+      <div class="hero-art" aria-label="A cosy reading corner with books and a plant">
+        <div class="art-sun"></div>
+        <div class="art-leaf leaf-one"></div><div class="art-leaf leaf-two"></div>
+        <div class="art-books">
+          <div class="book book-back"></div><div class="book book-middle"></div><div class="book book-front"></div>
+        </div>
+        <div class="art-cup"></div>
+        <span class="art-caption">slow down<br>and turn a page</span>
+      </div>
+    </section>
+
+    <section class="library-section" id="library">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FIND YOUR NEXT READ</p>
+          <h2>Our little collection</h2>
+          <p class="section-intro">A selection of stories and ideas to enjoy at your own pace.</p>
+        </div>
+        <div class="free-note"><span aria-hidden="true">✳</span> Always complimentary<br>for villa guests</div>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Search by title or author..." autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+        <button class="clear-button" id="clearFilters" type="button">Clear filters</button>
+      </div>
+      <div class="filter-row" id="categoryFilters" aria-label="Filter books by category"></div>
+      <div class="results-line"><span id="resultsCount" aria-live="polite"></span><span>Take your time. Find a story.</span></div>
+      <div class="book-grid" id="bookGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>
+        <span aria-hidden="true">⌕</span>
+        <h3>No books found just yet</h3>
+        <p>Try another title, author, or category.</p>
+        <button class="text-button" id="resetEmpty">Clear your search</button>
+      </div>
+    </section>
+
+    <section class="borrow-note" id="about">
+      <div class="borrow-icon" aria-hidden="true">❧</div>
+      <div><p class="eyebrow">A NOTE FROM COCO VILLA</p><h2>Make yourself at home.</h2>
+        <p>All books are complimentary for our guests during their stay. Choose a book, send us a quick WhatsApp request, and we'll be happy to help.</p>
+      </div>
+      <div class="borrow-stamp">READ<br>RELAX<br>REPEAT</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-brand" href="#">Coco Villa <span>Unawatuna</span></a>
+    <p>Enjoy your stay, take a moment to relax, and enjoy a good book.</p>
+    <p class="footer-small">All books are complimentary for our guests during their stay.</p>
+    <div class="footer-bottom"><span>© <span id="year"></span> Coco Villa Unawatuna</span><span>Made for slower moments.</span></div>
+  </footer>
+
+  <div class="modal-backdrop" id="bookModal" aria-hidden="true">
+    <section class="book-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close book details">×</button>
+      <div class="modal-cover-wrap" id="modalCoverWrap"></div>
+      <div class="modal-content">
+        <p class="eyebrow" id="modalCategory"></p>
+        <h2 id="modalTitle"></h2>
+        <p class="modal-author" id="modalAuthor"></p>
+        <p class="modal-description" id="modalDescription"></p>
+        <p class="modal-free">✳ Complimentary borrowing for Coco Villa guests</p>
+        <a class="whatsapp-button" id="whatsappLink" href="#" target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">◉</span> Request via WhatsApp
+        </a>
+        <p class="modal-footnote">WhatsApp will open with a prepared message. Please review and send it to us.</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
