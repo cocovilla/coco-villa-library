@@ -1,6 +1,6 @@
 // Change this to Coco Villa's WhatsApp number in international format.
 // Example for Sri Lanka: 94771234567 (no + sign, spaces, or punctuation).
-const WHATSAPP_NUMBER = "947XXXXXXXX";
+const WHATSAPP_NUMBER = "94760687716";
 
 const CATEGORIES = ["All Books", "Literary Fiction", "Historical Fiction", "Mystery & Thriller", "Inspirational", "Memoir & Travel"];
 const grid = document.getElementById("bookGrid");
